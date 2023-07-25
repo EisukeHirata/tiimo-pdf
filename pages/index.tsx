@@ -125,8 +125,14 @@ export default function Home() {
       <Layout>
         <div className="mx-auto flex flex-col gap-4">
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
-            Chat With Your Docs
+            Chat With Your Textbooks
           </h1>
+          <a
+            className="text-blue-600 text-center"
+            href="http://www.untag-smd.ac.id/files/Perpustakaan_Digital_1/BUSINESS%20MBA%20in%20a%20day.pdf"
+          >
+            Sample Textbook(MBA)
+          </a>
           <main className={styles.main}>
             <div className={styles.cloud}>
               <div ref={messageListRef} className={styles.messagelist}>
@@ -222,9 +228,7 @@ export default function Home() {
                     id="userInput"
                     name="userInput"
                     placeholder={
-                      loading
-                        ? 'Waiting for response...'
-                        : 'What is this legal case about?'
+                      loading ? 'Waiting for response...' : 'Type your question'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
@@ -261,9 +265,7 @@ export default function Home() {
           </main>
         </div>
         <footer className="m-auto p-4">
-          <a href="https://twitter.com/mayowaoshin">
-            Powered by LangChainAI. Demo built by Mayo (Twitter: @mayowaoshin).
-          </a>
+          <a href="https://tiimo.ai">Join the waitlist for early access</a>
         </footer>
       </Layout>
     </>
